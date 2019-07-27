@@ -1,0 +1,26 @@
+#ifndef PARSER_DEF_H
+#define PARSER_DEF_H
+
+#include<stdio.h> 
+#include<string.h> 
+#include<stdlib.h>
+
+typedef struct astNode{
+    char *lexemeCurrentNode; 
+    int lineNo; 
+    char *token; 
+    char *valueIfNumber; 
+    char *parentNodeSymbol; 
+    int isLeafNode;
+    char *nodeSymbol; 
+    
+    struct treeNode *child;
+    struct treeNode *next;
+
+}astNode;
+
+typedef struct AST{
+    treeNode *root;
+}AST;
+
+#endif

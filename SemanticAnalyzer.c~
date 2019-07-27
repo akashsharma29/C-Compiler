@@ -1,0 +1,20 @@
+/**********************
+Batch number 39
+SAMISH BEDI 
+2012B3A7735P
+AKASH SHARMA
+2012B2A7771P
+**********************/
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include "parserDef.h"
+#include "symbolTableDef.h"
+#include "symbolTable.h"
+
+void TC_main(parseTree *PT){
+	
+	treeNode *AST=PT->root;
+	check_type(AST,"");
+	
+}

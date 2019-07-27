@@ -1,0 +1,50 @@
+/**********************
+Batch number 39
+SAMISH BEDI 
+2012B3A7735P
+AKASH SHARMA
+2012B2A7771P
+**********************/
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+#include "parserDef.h"
+#include "symbolTableDef.h"
+#include "symbolTable.h"
+
+
+
+void check_type(treeNode *AST){
+	if(AST==NULL) return;
+	
+	if(strcmp("<function>",AST->nodeSymbol)==0){
+		
+	}
+	`
+	check_type(AST->ASTnext);
+}
+
+
+/*
+void handle_while(treeNode *AST){
+	if(AST==NULL || strcmp("TK_ENDWHILE", AST->nodeSymbol)==0) return;
+	
+	if(strcmp("TK_WHILE", AST->nodeSymbol)==0){
+		
+	}
+	
+	handle_while(AST->ASTchild);
+	handle_while(AST->ASTnext);
+
+
+}*/
+
+void TC_main(parseTree *PT){
+	
+	treeNode *AST=PT->root;
+	check_type(AST->ASTchild);
+	//handle_while(AST);
+	
+}
+
+

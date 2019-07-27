@@ -1,0 +1,53 @@
+extern printf
+extern scanf
+
+section .bss
+	d2:	resb	8
+	b2:	resb	8
+	c2:	resb	8
+	b3:	resb	8
+	buffer0:	resb	8
+	buffer1:	resb	8
+	buffer2:	resb	8
+	buffer3:	resb	8
+	buffer4:	resb	8
+	buffer5:	resb	8
+	buffer6:	resb	8
+	buffer7:	resb	8
+	buffer8:	resb	8
+	buffer9:	resb	8
+
+section .data
+	scanint:	dw "%d", 0
+ft: 	db "a=%d",10,0;
+
+section .text
+
+global main
+
+
+main:
+	
+;	push rbp
+
+	mov	rsi,b2
+	mov	rdi,scanint
+	call scanf
+
+;	mov rax,20
+;	mov [c2],rax
+
+	mov	rsi,d2
+	mov	rdi,scanint
+
+	call scanf
+
+;	mov rax,1
+;	mov [b2],rax
+	mov	rsi,[b2]
+	mov	rdi,ft
+
+	call printf
+
+;	pop rbp
+	ret
